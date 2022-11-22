@@ -1,0 +1,33 @@
+// SPDX-License-Identifier: GPL-3.0
+
+pragma solidity >=0.7.0 <0.9.0;
+
+contract StructTest {
+    struct Book {
+        string name;
+        string author;
+        uint bookID;
+        uint price;
+    }
+
+    Book book;
+    function setBook() public {
+        book = Book("blockchain for beginner","iNeuron",4,100);
+    }
+
+    function getBookId() public view returns(uint) {
+        return book.bookID;
+    }
+
+     function getName() public view  returns(string memory)  {
+      return book.name;
+    }
+
+     function getAuthor() public view  returns(string memory)  {
+      return book.author;
+    }
+
+     function getprice() public view  returns(uint)  {
+      return book.price;
+    }
+}
